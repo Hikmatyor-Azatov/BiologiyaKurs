@@ -1,0 +1,275 @@
+.website-top {
+    background-color: mintcream;
+}
+
+#logo {
+    font-size: 2.3rem;
+    text-decoration: none;
+    color: dodgerblue;
+    margin-left: 25px;
+}
+#top_bars {
+    color: #000;
+}
+
+.topNav {
+    background-color: cyan;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.topNav ul {
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.topNav ul li {
+    float: left;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+}
+.topNav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.topNav ul li:hover {
+    background-color: darkgreen;
+}
+.topNav ul li:hover a {
+    color: aqua;
+}
+
+#top_search_form {
+    display: flex;
+}
+#top_search_form input[type="search"] {
+    border-radius: 6px;
+    background-color: darkturquoise;
+    font-size: 1.1rem;
+}
+
+#top_search_form input[type="search"]:focus {
+    background-color: #fff;
+}
+
+.top-welcome-msg p {
+    text-align: justify;
+}
+
+/*Carousel images*/
+.img_container {
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.rows:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    object-fit: cover;
+    height: 100px;
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+/* Website cards */
+#cards {
+    overflow: hidden;
+}
+
+#cards .card {
+    --x_margin: 1%;
+    float: left;
+    width: calc(25% - 2 * var(--x_margin));
+    margin: auto var(--x_margin);
+}
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.fa-upload {
+    float: right;
+    color: blueviolet;
+    transition: font-size 0.5s ease;
+}
+.fa-upload:hover {
+    font-size: 130%;
+    color: aquamarine;
+}
+/*Website footer*/
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    clear: both;
+}
+
+footer div:first-child div a {
+    display: block;
+    text-decoration: none;
+    color: aqua;
+    font-size: 1.2rem;
+}
+@media screen and (max-width: 1200px) {
+    .card img {
+        height: 200px;
+    }
+    .card-btns a {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #logo {
+        font-size: 2rem;
+    }
+    .topNav {
+        overflow: hidden;
+        display: block;
+    }
+
+    #top_search_form {
+        float: right;
+
+        margin: 1px 15px 10px auto;
+    }
+    footer div:last-child {
+        display: none;
+    }
+
+    #cards .card {
+        width: calc(50% - 2 * var(--x_margin));
+        margin: 5px;
+    }
+
+    .card img {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #logo {
+        font-size: 1.5rem;
+    }
+    .topNav {
+        display: block;
+        position: static;
+    }
+    .topNav ul li {
+        display: block;
+        float: none;
+        font-size: 1.1rem;
+        padding: 5px;
+        text-align: center;
+    }
+    #top_search_form {
+        margin: 10px auto;
+    }
+    footer {
+        display: block;
+        text-align: center;
+    }
+
+    #cards .card {
+        float: none;
+        width: calc(100% - 150px);
+        margin: 15px auto;
+    }
+
+    .card img {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #cards .card {
+        width: calc(100% - 100px);
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
