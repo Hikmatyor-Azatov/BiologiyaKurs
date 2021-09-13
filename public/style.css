@@ -248,8 +248,11 @@ footer div:first-child div a {
 }
 
 @media screen and (max-width: 550px) {
+    :root {
+        --footer-height: 300px;
+    }
     #logo {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .topNav {
         display: block;
@@ -282,6 +285,9 @@ footer div:first-child div a {
 }
 
 @media screen and (max-width: 350px) {
+    #logo {
+        font-size: 1rem;
+    }
     #cards .card {
         width: calc(100% - 100px);
     }
