@@ -1,304 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Biology website</title>
-
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous"
-        />
-
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-    </head>
+    <%- include("layouts/header"); -%>
     <body>
-        <!-- Top side of the website -->
-        <div
-            class="
-                website-top
-                d-flex
-                justify-content-between
-                align-items-center
-            "
-        >
-            <a href="#" id="logo" style="font-family: amperzand"
-                >Amonov Sarvarbek Biologiya Kursi</a
-            >
-            <i id="top_bars" class="fa fa-2x me-4 fa-window-close"></i>
-        </div>
-
-        <!-- Navigation bar -->
-        <nav class="topNav">
-            <ul>
-                <li><a href="index.html">Bosh sahifa</a></li>
-                <li><a href="news.html">Qiziqarli ma'lumotlar</a></li>
-                <li><a href="contact.html">Biz bilan bo'g'lanish</a></li>
-            </ul>
-            <form id="top_search_form">
-                <input type="search" placeholder="Izlash..." class="me-2" />
-                <button
-                    type="submit"
-                    class="btn btn-outline-success btn-sm me-3"
-                >
-                    <i class="fa fa-search"></i>
-                    Izlash
-                </button>
-            </form>
-        </nav>
-
-        <div class="top-welcome-msg container mt-3">
-            <h1 class="text-center">Saytimizga xush kelibsiz</h1>
-            <p>
-                Bu vebsayt orqali siz biologiya haqida ko'plab ma'lumotlarga ega
-                bo'lishingiz mumkin. Sayt asosan biologiya fanidan test
-                topshiruvchi abituriyentlar uchun mo'ljallangan. Shuningdek
-                saytda istalgan biologiya faniga qiziquvchilar uchun foydali
-                ma'lumotlar berib boriladi.
-            </p>
-        </div>
-
-        <!-- Image carousel -->
-        <div class="img_container">
-            <!-- Full-width images with number text -->
-            <div class="mySlides">
-                <div class="numbertext">1 / 4</div>
-                <img src="img/carousel2.jpg" style="width: 100%" />
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">2 / 4</div>
-                <img src="img/carousel3.jpg" style="width: 100%" />
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">3 / 4</div>
-                <img src="img/image1.jpg" style="width: 100%" />
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">4 / 4</div>
-                <img src="img/image2.jpg" style="width: 100%" />
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <!-- Image text -->
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
-
-            <!-- Thumbnail images -->
-            <div class="rows">
-                <div class="column">
-                    <img
-                        class="demo cursor"
-                        src="img/carousel2.jpg"
-                        style="width: 100%"
-                        onclick="currentSlide(1)"
-                        alt=""
-                    />
-                </div>
-                <div class="column">
-                    <img
-                        class="demo cursor"
-                        src="img/carousel3.jpg"
-                        style="width: 100%"
-                        onclick="currentSlide(2)"
-                        alt=""
-                    />
-                </div>
-                <div class="column">
-                    <img
-                        class="demo cursor"
-                        src="img/image1.jpg"
-                        style="width: 100%"
-                        onclick="currentSlide(3)"
-                        alt=""
-                    />
-                </div>
-                <div class="column">
-                    <img
-                        class="demo cursor"
-                        src="img/image2.jpg"
-                        style="width: 100%"
-                        onclick="currentSlide(4)"
-                        alt=""
-                    />
-                </div>
-            </div>
-        </div>
-        <!-- Cards to display books -->
-
-        <div id="cards" class="my-3">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title">
-                        5-sinf Biologiya
-                        <a
-                            href="https://eduportal.uz/Umumiyfiles/darsliklar/5/botanika_5_uzb.pdf"
-                            download="true"
-                            ><i
-                                class="fa fa-upload"
-                                title="Kitobni yuklab olish"
-                            ></i
-                        ></a>
-                    </h5>
-                </div>
-                <div class="card-body">
-                    <img src="img/5-sinf.jpg" class="card-img-top" />
-                    <p class="card-text">
-                        Darslik: <b>5-sinf Biologiya</b>
-                        <br />
-                        Nashr qilingan: <b>2020-yil</b>
-                    </p>
-                    <a
-                        href="https://eduportal.uz/Umumiyfiles/darsliklar/5/botanika_5_uzb.pdf"
-                        target="_blank"
-                        role="button"
-                        class="btn btn-outline-success float-end"
-                        >Onlayn&nbsp;o'qish</a
-                    >
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title">
-                        6-sinf Biologiya
-                        <a
-                            href="https://eduportal.uz/Umumiyfiles/darsliklar/6/botanika_6_uzb.pdf"
-                            download="true"
-                            ><i
-                                class="fa fa-upload"
-                                title="Kitobni yuklab olish"
-                            ></i
-                        ></a>
-                    </h5>
-                </div>
-                <div class="card-body">
-                    <img src="img/6-sinf.jpg" class="card-img-top" />
-                    <p class="card-text">
-                        Darslik: <b>6-sinf Botanika</b>
-                        <br />
-                        Nashr qilingan: <b>2020-yil</b>
-                    </p>
-                    <a
-                        href="https://eduportal.uz/Umumiyfiles/darsliklar/6/botanika_6_uzb.pdf"
-                        target="_blank"
-                        role="button"
-                        class="btn btn-outline-success float-end"
-                        >Onlayn&nbsp;o'qish</a
-                    >
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title">
-                        7-sinf Zoologiya
-                        <a
-                            href="https://eduportal.uz/Umumiyfiles/darsliklar/7/zoologiya_7_uzb.pdf"
-                            download="true"
-                            ><i
-                                class="fa fa-upload"
-                                title="Kitobni yuklab olish"
-                            ></i
-                        ></a>
-                    </h5>
-                </div>
-                <div class="card-body">
-                    <img src="img/7-sinf.jpg" class="card-img-top" />
-                    <p class="card-text">
-                        Darslik: <b>7-sinf Zoologiya</b>
-                        <br />
-                        Nashr qilingan: <b>2020-yil</b>
-                    </p>
-                    <a
-                        href="https://eduportal.uz/Umumiyfiles/darsliklar/7/zoologiya_7_uzb.pdf"
-                        target="_blank"
-                        role="button"
-                        class="btn btn-outline-success float-end"
-                        >Onlayn&nbsp;o'qish</a
-                    >
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title">
-                        8-sinf
-                        <a
-                            href="https://eduportal.uz/Umumiyfiles/darsliklar/8/odam_va_uning_salomatligi_8_uzb.pdf"
-                            download="filename"
-                            ><i
-                                class="fa fa-upload"
-                                title="Kitobni yuklab olish"
-                            ></i
-                        ></a>
-                    </h5>
-                </div>
-                <div class="card-body">
-                    <img src="img/8-sinf.jpg" class="card-img-top" />
-                    <p class="card-text">
-                        Darslik: <small>8-sinf Odam va uning salomatligi</small>
-                        <br />
-                        Nashr qilingan: <b>2020-yil</b>
-                    </p>
-                    <a
-                        href="https://eduportal.uz/Umumiyfiles/darsliklar/8/odam_va_uning_salomatligi_8_uzb.pdf"
-                        target="_blank"
-                        role="button"
-                        class="btn btn-outline-success float-end"
-                        >Onlayn&nbsp;o'qish</a
-                    >
-                </div>
-            </div>
-        </div>
-
-        <footer class="pt-2">
-            <div>
-                <div>
-                    <a href="#">Bosh sahifa</a>
-                    <a href="#">Qiziqarli ma'lumotlar</a>
-                    <a href="#">Biz bilan bog'lanish</a>
-                </div>
-                <br />
-                <p>&copy;2021</p>
-            </div>
-            <div>
-                <i class="fa fa-telegram fa-2x"></i>
-                <span class="text-info">Telegram orqali bog'lanish</span>
-                <br />
-                <i class="fa fa-facebook-square fa-2x my-3"></i>
-                <span class="text-info">Facebook orqali bog'lanish</span>
-                <br />
-                <i class="fa fa-instagram fa-2x"></i>
-                <span class="text-info">Instagram orqali bog'lanish</span>
-            </div>
-            <div>
-                <h2 class="text-warning">Biologiya tayyorlov kursi</h2>
-                <p class="text-info">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    <br />
-                    Cum doloremque omnis deleniti nam harum eos nihil.
+        <div id="main-container">
+            <%- include("layouts/navbar"); -%>
+            <div class="top-welcome-msg container mt-3">
+                <h1 class="text-center">Saytimizga xush kelibsiz</h1>
+                <p>
+                    Bu vebsayt orqali siz biologiya haqida ko'plab ma'lumotlarga
+                    ega bo'lishingiz mumkin. Sayt asosan biologiya fanidan test
+                    topshiruvchi abituriyentlar uchun mo'ljallangan. Shuningdek
+                    saytda istalgan biologiya faniga qiziquvchilar uchun foydali
+                    ma'lumotlar berib boriladi.
                 </p>
             </div>
-        </footer>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"
-        ></script>
+            <!-- Image carousel -->
+            <div class="img_container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="img/carousel2.jpg" style="width: 100%" />
+                </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/carousel3.jpg" style="width: 100%" />
+                </div>
 
-        <script src="./javascript/index.js"></script>
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="img/image1.jpg" style="width: 100%" />
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="img/image2.jpg" style="width: 100%" />
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Image text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail images -->
+                <div class="rows">
+                    <div class="column">
+                        <img
+                            class="demo cursor"
+                            src="img/carousel2.jpg"
+                            style="width: 100%"
+                            onclick="currentSlide(1)"
+                            alt=""
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                            class="demo cursor"
+                            src="img/carousel3.jpg"
+                            style="width: 100%"
+                            onclick="currentSlide(2)"
+                            alt=""
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                            class="demo cursor"
+                            src="img/image1.jpg"
+                            style="width: 100%"
+                            onclick="currentSlide(3)"
+                            alt=""
+                        />
+                    </div>
+                    <div class="column">
+                        <img
+                            class="demo cursor"
+                            src="img/image2.jpg"
+                            style="width: 100%"
+                            onclick="currentSlide(4)"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            <!-- Cards to display books -->
+
+            <div id="cards" class="my-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            5-sinf Biologiya
+                            <a
+                                href="https://eduportal.uz/Umumiyfiles/darsliklar/5/botanika_5_uzb.pdf"
+                                download="true"
+                                ><i
+                                    class="fa fa-upload"
+                                    title="Kitobni yuklab olish"
+                                ></i
+                            ></a>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/5-sinf.jpg" class="card-img-top" />
+                        <p class="card-text">
+                            Darslik: <b>5-sinf Biologiya</b>
+                            <br />
+                            Nashr qilingan: <b>2020-yil</b>
+                        </p>
+                        <a
+                            href="https://eduportal.uz/Umumiyfiles/darsliklar/5/botanika_5_uzb.pdf"
+                            target="_blank"
+                            role="button"
+                            class="btn btn-outline-success float-end"
+                            >Onlayn&nbsp;o'qish</a
+                        >
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            6-sinf Biologiya
+                            <a
+                                href="https://eduportal.uz/Umumiyfiles/darsliklar/6/botanika_6_uzb.pdf"
+                                download="true"
+                                ><i
+                                    class="fa fa-upload"
+                                    title="Kitobni yuklab olish"
+                                ></i
+                            ></a>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/6-sinf.jpg" class="card-img-top" />
+                        <p class="card-text">
+                            Darslik: <b>6-sinf Botanika</b>
+                            <br />
+                            Nashr qilingan: <b>2020-yil</b>
+                        </p>
+                        <a
+                            href="https://eduportal.uz/Umumiyfiles/darsliklar/6/botanika_6_uzb.pdf"
+                            target="_blank"
+                            role="button"
+                            class="btn btn-outline-success float-end"
+                            >Onlayn&nbsp;o'qish</a
+                        >
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            7-sinf Zoologiya
+                            <a
+                                href="https://eduportal.uz/Umumiyfiles/darsliklar/7/zoologiya_7_uzb.pdf"
+                                download="true"
+                                ><i
+                                    class="fa fa-upload"
+                                    title="Kitobni yuklab olish"
+                                ></i
+                            ></a>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/7-sinf.jpg" class="card-img-top" />
+                        <p class="card-text">
+                            Darslik: <b>7-sinf Zoologiya</b>
+                            <br />
+                            Nashr qilingan: <b>2020-yil</b>
+                        </p>
+                        <a
+                            href="https://eduportal.uz/Umumiyfiles/darsliklar/7/zoologiya_7_uzb.pdf"
+                            target="_blank"
+                            role="button"
+                            class="btn btn-outline-success float-end"
+                            >Onlayn&nbsp;o'qish</a
+                        >
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            8-sinf
+                            <a
+                                href="https://eduportal.uz/Umumiyfiles/darsliklar/8/odam_va_uning_salomatligi_8_uzb.pdf"
+                                download="filename"
+                                ><i
+                                    class="fa fa-upload"
+                                    title="Kitobni yuklab olish"
+                                ></i
+                            ></a>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/8-sinf.jpg" class="card-img-top" />
+                        <p class="card-text">
+                            Darslik:
+                            <small>8-sinf Odam va uning salomatligi</small>
+                            <br />
+                            Nashr qilingan: <b>2020-yil</b>
+                        </p>
+                        <a
+                            href="https://eduportal.uz/Umumiyfiles/darsliklar/8/odam_va_uning_salomatligi_8_uzb.pdf"
+                            target="_blank"
+                            role="button"
+                            class="btn btn-outline-success float-end"
+                            >Onlayn&nbsp;o'qish</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('layouts/footer'); -%>
     </body>
 </html>
