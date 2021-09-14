@@ -1,0 +1,35 @@
+.news img {
+    width: 300px;
+    padding: 5px;
+    margin: 8px;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.news div:nth-child(odd) img {
+    float: right;
+}
+.news div:nth-child(even) img {
+    float: left;
+}
+
+hr {
+    clear: both;
+}
+
+@media screen and (max-width: 800px) {
+    .news img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .news img {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .news img {
+        width: 100px;
+    }
+}
